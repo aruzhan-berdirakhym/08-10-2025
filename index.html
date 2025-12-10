@@ -13,91 +13,79 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Internal CSS (base styles) -->
+    <!-- Internal CSS for base styling -->
     <style>
         body {
             font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
             line-height: 1.6;
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
             background-color: #fefefe;
+            color: #333;
         }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #222;
-            padding: 15px 20px;
+            background-color: #4a4a4a;
             color: white;
+            padding: 20px 0;
         }
-        header nav a {
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            height: 50px;
+        }
+        nav a {
             color: white;
             margin-left: 15px;
             text-decoration: none;
             font-weight: bold;
         }
-        header nav a:hover {
-            color: #ffcc00;
+        nav a:hover {
+            text-decoration: underline;
         }
-        .logo {
-            width: 120px;
-            height: auto;
-        }
-        #hero {
+        .banner {
             text-align: center;
             padding: 40px 20px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        #hero img {
-            border-radius: 50%;
-            border: 3px solid #555;
-            margin-top: 15px;
+            background-color: #e0f7fa;
         }
         section {
-            margin-bottom: 40px;
+            padding: 30px 20px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            border-radius: 8px;
         }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-        }
-        .project-img {
+        img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #ccc;
-            margin-top: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-        }
-        table, th, td {
-            border: 1px solid #888;
+            margin-top: 20px;
         }
         th, td {
-            padding: 12px;
+            border: 1px solid #999;
+            padding: 10px;
             text-align: left;
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+        th {
+            background-color: #cfd8dc;
         }
-        tr:hover {
-            background-color: #e6f7ff;
+        tr:nth-child(even) {
+            background-color: #f0f0f0;
         }
         blockquote {
-            border-left: 4px solid #555;
-            padding-left: 15px;
-            color: #555;
-            margin: 15px 0;
             font-style: italic;
-        }
-        a {
-            color: #0066cc;
+            border-left: 4px solid #4a4a4a;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #555;
         }
     </style>
 </head>
@@ -106,18 +94,20 @@
 
 <!-- Header with logo and navigation -->
 <header>
-    <img src="images/logo.png" alt="Logo" class="logo">
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#study-plan">Study Plan</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-container">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#study-plan">Study Plan</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <!-- Hero Section -->
-<div id="hero" class="banner" data-track="intro" style="background-color: #ffeedd;">
+<div id="hero" class="banner" data-track="intro" style="background-color: #b2ebf2;">
     <h1>Aruzhan Berdirakhym</h1>
     <p>Welcome to my personal portfolio splash page!</p>
     <img src="images/portrait.png" alt="Portrait of Aruzhan" width="220" title="Hello, this is me!">
@@ -132,9 +122,12 @@
 
 <!-- Projects Section -->
 <section id="projects">
-    <h2>Featured Project</h2>
-    <img src="images/project.png" alt="StudyBuddy project screenshot" width="400" class="project-img" title="StudyBuddy: Your Simple Math Learning Assistant">
-    <p><strong>StudyBuddy:</strong> Your Simple Math Learning Assistant is a project I developed to help students practice math skills interactively. It includes lessons, quizzes, and progress tracking.</p>
+    <h2>Featured Project: StudyBuddy</h2>
+    <img src="images/project.png" alt="StudyBuddy project screenshot" width="400" title="StudyBuddy Screenshot" class="project-img">
+    <p>StudyBuddy is a simple math learning assistant that helps students practice and improve their math skills through interactive exercises and instant feedback.</p>
+    <blockquote cite="https://example.com">
+        "StudyBuddy is designed to make learning math easy, engaging, and effective." 
+    </blockquote>
 </section>
 
 <!-- Skills Section -->
@@ -190,7 +183,7 @@
                 <td>3</td>
                 <td>JavaScript Basics</td>
                 <td>Interactive elements, simple scripts</td>
-                <td>In Progress</td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td colspan="4" style="text-align:center; font-weight:bold;">Break Week</td>
@@ -199,12 +192,12 @@
                 <td>4</td>
                 <td rowspan="2">Project</td>
                 <td>Build StudyBuddy portfolio page</td>
-                <td>Planned</td>
+                <td>In Progress</td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Deploy to GitHub Pages</td>
-                <td>Planned</td>
+                <td>In Progress</td>
             </tr>
         </tbody>
     </table>
