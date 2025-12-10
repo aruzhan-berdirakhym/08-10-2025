@@ -12,29 +12,115 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Internal CSS (base styles) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            background-color: #fefefe;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 15px 20px;
+            color: white;
+        }
+        header nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            color: #ffcc00;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        #hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        #hero img {
+            border-radius: 50%;
+            border: 3px solid #555;
+            margin-top: 15px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .project-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #888;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+        blockquote {
+            border-left: 4px solid #555;
+            padding-left: 15px;
+            color: #555;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        a {
+            color: #0066cc;
+        }
+    </style>
 </head>
 
 <body>
 
 <!-- Header with logo and navigation -->
 <header>
-    <div class="header-container">
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#study-plan">Study Plan</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#study-plan">Study Plan</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <!-- Hero Section -->
-<div id="hero" class="banner" data-track="intro">
+<div id="hero" class="banner" data-track="intro" style="background-color: #ffeedd;">
     <h1>Aruzhan Berdirakhym</h1>
     <p>Welcome to my personal portfolio splash page!</p>
-    <img src="images/portrait.jpg" alt="Portrait of Aruzhan" width="220" title="Hello, this is me!">
+    <img src="images/portrait.jpeg" alt="Portrait of Aruzhan" width="220" title="Hello, this is me!">
 </div>
 
 <!-- About Me Section -->
@@ -47,7 +133,7 @@
 <!-- Projects Section -->
 <section id="projects">
     <h2>Featured Project</h2>
-    <img src="images/project.jpg" alt="Sample project screenshot" width="400" class="project-img">
+    <img src="images/project.png" alt="Sample project screenshot" width="400" class="project-img" title="My Web Development Project">
     <p>This project demonstrates my ability to create responsive layouts and apply CSS styling.</p>
     <blockquote cite="https://example.com">
         "Aruzhan shows great dedication and attention to detail in web development projects." — Mentor
@@ -138,3 +224,4 @@
 
 </body>
 </html>
+
